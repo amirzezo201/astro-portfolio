@@ -1,0 +1,74 @@
+---
+import { Picture } from "astro:assets";
+
+const { projectData } = Astro.props;
+---
+
+<article
+  class="flex flex-col h-full border-2 border-gray-200 pt-4 pb-6 px-4 rounded-md hover:border-secondary">
+  <!-- Body -->
+  <div class="h-full flex flex-col gap-content p-content justify-between">
+    <Picture
+      src={projectData.image}
+      class="mb-4 rounded-md"
+      alt="Amir Geek Project Image"
+      width={800}
+      height={400}
+      widths={[200, 300, 350]}
+      sizes="(max-width: 800px) 100vw, 800px"
+      loading="eager"
+      format="avif"
+    />
+    <!-- Body Content -->
+    <div class="flex flex-col gap-content px-4 flex-1">
+      <!-- Meta -->
+      <div class="flex flex-col items-start">
+        <!-- Title -->
+        <h3 class="font-bold text-xl">{projectData.title}</h3>
+        <!-- End Title -->
+        <!-- Snippet -->
+        <p class="leading-relaxed text-black">
+          {projectData.shortdescription}
+        </p>
+        <!-- End Snippet -->
+      </div>
+      <!-- End Meta -->
+    </div>
+    <!-- End Body Content -->
+    <!-- Footer -->
+    <div class="flex items-end px-4 pt-4 flex-1">
+      <!-- Tags -->
+      <ul class="flex flex-grow flex-wrap">
+        {
+          projectData.tags.map((item) => (
+            <li class="badge badge-sm bg-secondary text-black opacity-80 mr-1 mb-1">
+              {`#${item}`}
+            </li>
+          ))
+        }
+      </ul>
+      <!-- End Tags -->
+      <!-- CTA -->
+      <a
+        href={projectData.link}
+        class="inline-flex items-center flex-shrink-0 text-black">
+        <span class="inline-flex items-center flex-shrink-0 text-black">
+          View Project <svg
+            class="w-4 h-4 transition-all ml-2 group-hover:ml-0 group-focus-within:ml-0 group-hover:mr-2 group-focus-within:mr-2"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            stroke-width="2"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round">
+            <path d="M5 12h14"></path>
+            <path d="M12 5l7 7-7 7"></path>
+          </svg>
+        </span>
+      </a>
+      <!-- End CTA -->
+    </div>
+    <!-- End Footer -->
+  </div>
+  <!-- End Body -->
+</article>

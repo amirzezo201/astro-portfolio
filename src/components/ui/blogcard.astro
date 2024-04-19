@@ -1,0 +1,39 @@
+---
+import { Picture } from "astro:assets";
+
+const { data, index, slug } = Astro.props;
+---
+
+<a href={`/blog/${slug}`}>
+  <div class="space-y-4">
+    <Picture
+      src={data.image.src}
+      alt={data.image.alt}
+      sizes="(max-width: 800px) 100vw, 800px"
+      width={800}
+      height={600}
+      loading={index <= 2 ? "eager" : "lazy"}
+      decoding={index <= 2 ? "sync" : "async"}
+      class="w-full rounded-md object-cover object-center bg-white h-[250px]"
+    />
+    <div>
+      <span class="text-blue-400 uppercase tracking-wider text-sm font-medium">
+        {data.category}
+      </span>
+
+      <h2 class="text-3xl font-semibold leading-snug tracking-tight mt-1">
+        {data.title}
+      </h2>
+
+      <div class="flex gap-2 mt-3">
+        <span class="text-gray-400">
+          {data.author}
+        </span>
+        <span class="text-gray-400">•</span>
+        <time class="text-gray-400" datetime={data.publishDate.toISOString()}>
+          {data.publishDate.toDateString()}
+        </time>
+      </div>
+    </div>
+  </div>
+</a>

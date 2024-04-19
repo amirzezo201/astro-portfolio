@@ -1,0 +1,73 @@
+---
+import Container from "@components/container.astro";
+import Cta from "@components/cta.astro";
+import ProjectCard from "@components/ui/projectcard.astro";
+import Layout from "@layouts/Layout.astro";
+import Latestblogs from "@components/latestblogs.astro";
+const projectsData = [
+  {
+    title: "Gamearound",
+    shortdescription:
+      "Gamearound is a game platform for buying, selling, and showcasing game assets and NFTs, empowering the gaming community with new monetization models and blockchain-based innovations.",
+    tags: ["Next", "React", "Directus CMS", "Serverless", "CI/CD", "GSAP"],
+    image: "/images/gamearound-img.webp",
+    link: "http://gamearound.com",
+  },
+  {
+    title: "Metamaster",
+    shortdescription:
+      "Astro renders your entire page to static HTML, removing all JavaScript from your final build by default.",
+    tags: ["React", "Typescript", "I18n", "Serverless", "Web 3"],
+    image: "/images/Metamaster-Guild.webp",
+    link: "https://memag.io",
+  },
+  {
+    title: "Constream Docs",
+    shortdescription:
+      "Need some JS? Astro can automatically hydrate interactive components when they become visible on the page.  ",
+    tags: ["Next", "Nextra", "Tailwind", "Typescript"],
+    image: "/images/constream.webp",
+    link: "https://docs.constream.co/",
+  },
+  {
+    title: "Ozacloud",
+    shortdescription:
+      "Astro supports TypeScript, Scoped CSS, CSS Modules, Sass, Tailwind, Markdown, MDX, and any other npm packages.",
+    tags: ["Next", "React", "Tailwind", "Directus CMS", "WHMCS", "I18n"],
+    image: "/images/ozacloud.webp",
+    link: "https://ozaweb-seven.vercel.app",
+  },
+  {
+    title: "We Krazy",
+    shortdescription:
+      "Automatic sitemaps, RSS feeds, pagination and collections take the pain out of SEO and syndication. It just works!",
+    tags: ["Next", "React", "Tailwind"],
+    image: "/images/wekrazy.webp",
+    link: "https://we-krazy-new.vercel.app",
+  },
+  {
+    title: "Appsellerator",
+    shortdescription:
+      "A radically fast frontend to drive marketing in a competitive market for a top tier service business in mid Michigan.",
+    tags: ["Vue", "Astro", "Tailwind", "Directus CMS"],
+    image: "/images/appsell.webp",
+    link: "https://appsellerator.com/",
+  },
+];
+---
+
+<Layout title="">
+  <Container>
+    <div class="mt-16">
+      <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight text-center">
+        My <span class="underpattern">Projects</span>
+      </h2>
+    </div>
+
+    <div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-8">
+      {projectsData.map((item) => <ProjectCard projectData={item} />)}
+    </div>
+    <Latestblogs />
+    <Cta />
+  </Container>
+</Layout>

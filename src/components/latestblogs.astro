@@ -1,0 +1,33 @@
+---
+import { getCollection } from "astro:content";
+import BlogCard from "@components/ui/blogcard.astro";
+
+const publishedBlogEntries = await getCollection("blog", ({ data }) => {
+  return !data.draft && data.publishDate < new Date();
+});
+// Sort content entries by publication date
+publishedBlogEntries.sort(function (a, b) {
+  return b.data.publishDate.valueOf() - a.data.publishDate.valueOf();
+});
+const latestBlogs = publishedBlogEntries.slice(0, 3);
+---
+
+<div class="my-16">
+  <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight">
+    My <span class="underpattern">Blogs</span>
+  </h2>
+</div>
+
+<ul class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-8">
+  {
+    latestBlogs.map((blogPostEntry, index) => (
+      <li>
+        <BlogCard
+          slug={blogPostEntry.slug}
+          data={blogPostEntry.data}
+          index={index}
+        />
+      </li>
+    ))
+  }
+</ul>

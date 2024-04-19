@@ -1,0 +1,89 @@
+---
+import Container from "@components/container.astro";
+import Cta from "@components/cta.astro";
+import Layout from "@layouts/Layout.astro";
+import Latestblogs from "@components/latestblogs.astro";
+import Experiencecard from "@components/ui/experiencecard.astro";
+const experienceData = [
+  {
+    title: "Software Engineer, Full Stack @ Gamearound",
+    from: "Jan 2020",
+    to: "Present",
+    description:
+      "Leading premium code delivery for international projects at Gamearound, overseeing client communication, documentation, and code quality enhancement through TypeScript and Test-Driven Development. Sharing animation expertise and managing AWS deployment with CI/CD pipelines. ",
+    tags: [
+      "React",
+      "Next",
+      "Astro",
+      "Vanilla JS",
+      "AWS",
+      "Azure",
+      "Docker",
+      "Directus CMS",
+    ],
+  },
+  {
+    title: "Software Engineer, Frontend @ Brem.io",
+    from: "Nov 2023",
+    to: "Feb 2024",
+    description:
+      " I spearhead the development of fast static websites using Astro.js and React. Simplifying content management with the Keystatic CMS, a file-based system, removes the complexities of a database. Additionally, I take charge of the CI/CD pipeline to ensure a seamless deployment process. This comprehensive approach allows us to efficiently develop, manage content, and deploy websites at Brem.io",
+    tags: ["Astro", "React", "Typescript", "Keystatic CMS"],
+  },
+  {
+    title: "Software Engineer, Frontend @ JPMoorhouse",
+    from: "Jan 2024",
+    to: "March 2024",
+    description:
+      "Developed and implemented a comprehensive NextJS-based e-commerce and front-end solution for Moorhouse Coating, a painting contractor, integrating it with their backend systems through REST APIs.",
+    tags: ["AstroJS", "Typescript", "Gsap", "Keystatic CMS"],
+  },
+  {
+    title: "Software Engineer, Frontend @ OzaCloud",
+    from: "Sep 2022",
+    to: "Aug 2023",
+    description:
+      "Led a comprehensive project involving the conversion of Figma designs to a Next.js application, integration with Directus CMS, deployment on CPanel/WHM, linkage with WHMCS for service purchases, and implementation of thorough unit testing to ensure robust functionality.",
+    tags: [
+      "Next",
+      "React",
+      "Typescript",
+      "Gsap",
+      "Directus CMS",
+      "WHM",
+      "WHMCS",
+    ],
+  },
+  {
+    title: "WordPress + Magento, Fullstack @ Group Medianet",
+    from: "Aug 2019",
+    to: "Jan 2020",
+    description:
+      "Led a comprehensive project involving the conversion of Figma designs to a Next.js application, integration with Directus CMS, deployment on CPanel/WHM, linkage with WHMCS for service purchases, and implementation of thorough unit testing to ensure robust functionality.",
+    tags: [
+      "WordPress",
+      "Elementor",
+      "Magento",
+      "CPanel",
+      "Mautic Email Marketing",
+    ],
+  },
+];
+---
+
+<Layout title="">
+  <Container>
+    <div class="my-16">
+      <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight text-center">
+        My <span class="underpattern">Experience</span>
+      </h2>
+    </div>
+
+    <ul class="mx-auto divide-y-2 divide-gray-100 experiences-list h-full">
+      {experienceData.map((item) => <Experiencecard data={item} />)}
+    </ul>
+
+    <Latestblogs />
+    <Cta />
+  </Container>
+</Layout>

@@ -1,0 +1,33 @@
+---
+import { Picture } from "astro:assets";
+import heroImage from "assets/avatar.png";
+import Link from "@components/ui/link.astro";
+import { Icon } from "astro-icon";
+---
+
+<main
+  class="grid lg:grid-cols-2 place-items-center pt-16 pb-8 md:pt-12 md:pb-24">
+  <div class="py-6 md:order-1 hidden md:flex justify-center">
+    <div class="w-3/5">
+      <Picture
+        src={heroImage}
+        alt="Astronaut in the air"
+        widths={[200, 300, 350]}
+        sizes="(max-width: 350px) 100vw, 350px"
+        loading="eager"
+        format="webp"
+      />
+    </div>
+  </div>
+  <div>
+    <h1
+      class="text-5xl lg:text-6xl xl:text-7xl font-bold lg:tracking-tight xl:tracking-tighter">
+      Hi, I'm Amir 👋
+    </h1>
+    <p class="text-lg mt-4 text-slate-600 max-w-xl">
+      I'm a software engineer specializing in building (and occasionally
+      Deploying) exceptional digital experiences. Currently, I'm focused on
+      building accessible, human-centered products at Gamearound.
+    </p>
+  </div>
+</main>

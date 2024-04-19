@@ -1,0 +1,66 @@
+---
+// @ts-ignore
+import { Icon } from "astro-icon";
+import ProjectCard from "./ui/projectcard.astro";
+
+const projectsData = [
+  {
+    title: "Gamearound",
+    shortdescription:
+      "Gamearound is a game platform for buying, selling, and showcasing game assets and NFTs, empowering the gaming community with new monetization models and blockchain-based innovations.",
+    tags: ["NextJS", "ReactJS", "Directus CMS", "Serverless", "CI/CD", "GSAP"],
+    image: "/images/gamearound-img.webp",
+    link: "http://gamearound.com",
+  },
+  {
+    title: "Metamaster",
+    shortdescription:
+      "World's first dedicated mobile P2E Gaming Guild! Meta Masters Guild is a Gaming Guild on Web3 creating fun and addictive gaming titles with playable NFTs, where the community can earn rewards, stake and trade.",
+    tags: ["ReactJS", "Typescript", "I18n", "Serverless", "Web 3"],
+    image: "/images/Metamaster-Guild.webp",
+    link: "https://memag.io",
+  },
+  {
+    title: "Constream Docs",
+    shortdescription:
+      "Constream is an advanced construction enterprise platform, built on transparent, immutable, and auditable data ensured by private blockchain technology.",
+    tags: ["NextJS", "Nextra", "Tailwind", "Typescript"],
+    image: "/images/constream.webp",
+    link: "https://docs.constream.co/",
+  },
+  {
+    title: "Ozacloud",
+    shortdescription:
+      "Ozacloud is a cloud hosting provider offering scalable IaaS solutions. The platform is designed to meet the evolving needs of modern enterprises with high availability, security, and scalability.",
+    tags: ["NextJS", "ReactJS", "Tailwind", "Directus CMS", "WHMCS", "I18n"],
+    image: "/images/ozacloud.webp",
+    link: "https://ozaweb-seven.vercel.app",
+  },
+  {
+    title: "We Krazy",
+    shortdescription:
+      "We Krazy is an independent agency, full of designers, developers, marketers and strategic thinkers.",
+    tags: ["NextJS", "ReactJS", "Tailwind"],
+    image: "/images/wekrazy.webp",
+    link: "https://we-krazy-new.vercel.app",
+  },
+  {
+    title: "Appsellerator",
+    shortdescription:
+      "Appsellerator help businesses go-to-market with unique brand assets to communicate identity,beautiful web, app, and game design to attract visitors and users, creating captivating content to convert customers.",
+    tags: ["VueJS", "AstroJS", "Tailwind", "Directus CMS"],
+    image: "/images/appsell.webp",
+    link: "https://appsellerator.com/",
+  },
+];
+---
+
+<div class="mt-16 md:mt-0">
+  <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight">
+    My <span class="underpattern">Projects</span>
+  </h2>
+</div>
+
+<div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-8">
+  {projectsData.map((item) => <ProjectCard projectData={item} />)}
+</div>

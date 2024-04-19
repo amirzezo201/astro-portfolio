@@ -1,0 +1,37 @@
+.underpattern {
+  position: relative;
+}
+.underpattern::after {
+  content: "";
+  position: absolute;
+  bottom: -0.125rem;
+  left: -0.5rem;
+  right: -0.5rem;
+  height: 0.75rem;
+  z-index: -1;
+  background-image: url("/images/underline.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.badge {
+  display: flex;
+  width: -moz-fit-content;
+  width: fit-content;
+  align-items: center;
+  gap: 0.25rem;
+  border-radius: 0.25rem;
+  padding: 0.25rem 0.5rem;
+}
+.badge-sm {
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+  padding-top: 0;
+  padding-bottom: 0;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+h3 {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}

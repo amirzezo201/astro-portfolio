@@ -1,6 +1,6 @@
 ---
 import { getCollection } from "astro:content";
-import BlogCard from "@components/ui/blogcard.astro";
+import BlogCard from "src/components/ui/blogcard.astro";
 
 const publishedBlogEntries = await getCollection("blog", ({ data }) => {
   return !data.draft && data.publishDate < new Date();

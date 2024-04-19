@@ -7,7 +7,7 @@ image: {
     alt: "data structures & algorithms"
 }
 publishDate: "2024-03-09 16:39"
-category: "Courses"
+category: "Article"
 author: "Amir Zezo"
 tags: [webdev, tailwindcss, frontend]
 ---

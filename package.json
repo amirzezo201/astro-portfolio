@@ -12,13 +12,9 @@
   },
   "dependencies": {
     "@astrojs/mdx": "^1.1.5",
-    "@astrojs/react": "^3.3.0",
     "@astrojs/sitemap": "^3.0.3",
     "@astrojs/tailwind": "^5.0.2",
-    "@astrojs/vercel": "^7.5.3",
     "@fontsource-variable/inter": "^5.0.15",
-    "@react-email/components": "^0.0.16",
-    "@react-email/render": "^0.0.12",
     "@tailwindcss/typography": "^0.5.10",
     "@types/react": "^18.2.79",
     "@types/react-dom": "^18.2.25",
@@ -28,7 +24,6 @@
     "astro-seo": "^0.8.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "resend": "^3.2.0",
     "sharp": "^0.33.0",
     "tailwindcss": "^3.3.5"
   }

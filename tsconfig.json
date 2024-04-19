@@ -1,11 +1,12 @@
 {
   "extends": "astro/tsconfigs/base",
   "compilerOptions": {
-    "baseUrl": "/Users/amir/Documents/amir-portfolio/src",
+    "baseUrl": "/Users/amir/Documents/astro-portfolio/src",
     "strictNullChecks": true,
     "types": [
       "astro/client"
     ],
+
     "paths": {
       "@lib/*": [
         "lib/*"

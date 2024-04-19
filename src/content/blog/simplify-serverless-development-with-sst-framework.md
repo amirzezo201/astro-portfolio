@@ -7,7 +7,7 @@ image: {
     alt: "SST DEV"
 }
 publishDate: "2024-03-08 11:39"
-category: "Tutorials"
+category: "Article"
 author: "Amir Zezo"
 tags: [webdev, tailwindcss, frontend]
 ---

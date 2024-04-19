@@ -7,7 +7,7 @@ image: {
     alt: "frontend master"
 }
 publishDate: "2024-03-07 15:39"
-category: "Tutorials"
+category: "Article"
 author: "Amir Zezo"
 tags: [astro, tailwindcss, frontend]
 ---

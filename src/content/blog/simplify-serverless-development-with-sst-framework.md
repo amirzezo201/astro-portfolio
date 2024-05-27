@@ -9,7 +9,7 @@ image: {
 publishDate: "2024-03-08 11:39"
 category: "Article"
 author: "Amir Zezo"
-tags: [webdev, tailwindcss, frontend]
+tags: ["Serverless","AWS","Cloud"]
 ---
 
 ### Save time and boost your productivity using SST
@@ -100,6 +100,3 @@ SST framework simplifies serverless development by providing an intuitive and op
 
 Remember, with SST, you can simplify your serverless development workflow and focus on what matters most: building robust and scalable applications.
 
-*More content at [**PlainEnglish.io](https://plainenglish.io/)**.*
-
-*Sign up for our [**free weekly newsletter](http://newsletter.plainenglish.io/)**. Follow us on [**Twitter](https://twitter.com/inPlainEngHQ)***, [***LinkedIn](https://www.linkedin.com/company/inplainenglish/)**, [**YouTube](https://www.youtube.com/channel/UCtipWUghju290NWcn8jhyAw)**, and [**Discord](https://discord.gg/GtDtUAvyhW).***

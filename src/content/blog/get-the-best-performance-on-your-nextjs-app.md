@@ -1,7 +1,7 @@
 ---
 draft: false
 title: "Get the Best Performance on Your Next.js App"
-snippet: "Ornare cum cursus laoreet sagittis nunc fusce posuere per euismod dis vehicula a, semper fames lacus maecenas dictumst pulvinar neque enim non potenti. Torquent hac sociosqu eleifend potenti."
+snippet: "Do you want to get 100 percent performance on your website with Next.js?"
 image: {
     src: "/images/blazing-fast.jpg",
     alt: "frontend master"
@@ -9,7 +9,7 @@ image: {
 publishDate: "2024-03-07 15:39"
 category: "Article"
 author: "Amir Zezo"
-tags: [astro, tailwindcss, frontend]
+tags: ["webdev",Nextjs, Website Speed, frontend]
 ---
 
 ## Get the Best Performance on Your Next.js App

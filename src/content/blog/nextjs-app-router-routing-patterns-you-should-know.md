@@ -9,7 +9,7 @@ image: {
 publishDate: "2024-03-09 16:39"
 category: "Article"
 author: "Amir Zezo"
-tags: [webdev, tailwindcss, frontend]
+tags: [webdev,"Nextjs","app router",]
 ---
 
 ![](/images/2151043334.jpg)
